@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ruleta de Números</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f4f7fd;
+      margin: 0;
+      height: 100vh;
+      justify-content: center;
+    }
+    #ruleta {
+      border: 8px solid #333;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 2px 2px 15px #ccc;
+    }
+    #flecha {
+      margin-top: -25px;
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 35px solid #e74c3c;
+      position: relative;
+      z-index: 2;
+    }
+    #girar {
+      margin-top: 25px;
+      padding: 12px 36px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.2em;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #ccc;
+      transition: background 0.3s;
+    }
+    #girar:hover {
+      background: #217dbb;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #333;
+      min-height: 30px;
+      font-weight: bold;
+    }
+    #volver {
+      margin-top: 18px;
+      padding: 10px 25px;
+      font-size: 1em;
+      background: #8e44ad;
+      color: #fff;
+      border: none;
+      border-radius: 21px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #volver:hover {
+      background: #663399;
+    }
+  </style>
+</head>
+<body>
+  <div id="flecha"></div>
+  <canvas id="ruleta" width="400" height="400"></canvas>
+  <button id="girar">GIRAR</button>
+  <div id="resultado"></div>
+  <button id="volver" onclick="window.location.href='proyecto1.html'">Volver a la Explicación</button>
+  <script>
+    // Colores variados para los sectores
+    const colores = [
+        "#f39c12", // naranja
+        "#16a085", // verde oscuro
+        "#d35400", // naranja oscuro
+        "#2980b9", // azul
+        "#8e44ad", // morado
+        "#c0392b", // rojo
+        "#2ecc71", // verde claro
+        "#e67e22"  // naranja claro
+    ];
+    // Opciones de la ruleta: Números del 1 al 8
+    const sectores = colores.map((color, i) => ({
+      color,
+      texto: `${i+1}`
+    }));
+
+    const canvas = document.getElementById('ruleta');
+    const ctx = canvas.getContext('2d');
+    const radius = canvas.width / 2;
+    const numSectores = sectores.length;
+    const anguloSector = 2 * Math.PI / numSectores;
+    let anguloActual = 0;
+    let girando = false;
+
+    // Dibuja la ruleta
+    function dibujaRuleta() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for(let i = 0; i < numSectores; i++) {
+        const inicio = anguloActual + i * anguloSector;
+        const final = inicio + anguloSector;
+
+        // Dibujo el sector
+        ctx.beginPath();
+        ctx.moveTo(radius, radius);
+        ctx.arc(radius, radius, radius-10, inicio, final);
+        ctx.closePath();
+        ctx.fillStyle = sectores[i].color;
+        ctx.fill();
+        ctx.stroke();
+
+        // Dibujo el texto del número
+        ctx.save();
+        ctx.translate(radius, radius);
+        ctx.rotate(inicio + anguloSector / 2);
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#fff";
+        ctx.font = "bold 28px Arial";
+        ctx.fillText(sectores[i].texto, radius-60, 10);
+        ctx.restore();
+      }
+    }
+
+    dibujaRuleta();
+
+    // Animación de giro
+    function girarRuleta() {
+      if (girando) return;
+      girando = true;
+      document.getElementById('resultado').textContent = '';
+      let velocidad = Math.random() * 0.2 + 0.25;
+      let friccion = 0.9915;
+      let totalGiros = 0;
+      function animar() {
+        anguloActual += velocidad;
+        anguloActual %= 2*Math.PI;
+        dibujaRuleta();
+        velocidad *= friccion;
+        totalGiros += velocidad;
+        if (velocidad > 0.002 || totalGiros < Math.PI * 13) {
+          requestAnimationFrame(animar);
+        } else {
+          girando = false;
+          mostrarResultado();
+        }
+      }
+      animar();
+    }
+
+    // Determina el número ganador
+    function mostrarResultado() {
+      let anguloFlecha = (3 * Math.PI/2 - anguloActual) % (2*Math.PI);
+      if (anguloFlecha < 0) anguloFlecha += 2*Math.PI;
+      let indice = Math.floor((anguloFlecha / (2*Math.PI)) * numSectores);
+      document.getElementById('resultado').textContent =
+        "¡Resultado: " + sectores[indice].texto + "!";
+    }
+
+    document.getElementById('girar').addEventListener('click', girarRuleta);
+
+    // Puedes girar la ruleta todas las veces que quieras :)
+  </script>
+</body>
+</html>
