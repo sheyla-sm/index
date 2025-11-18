@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tipos de Desastres Naturales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f8fa;
+      color: #343a40;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    #container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #ccc;
+      margin-top: 36px;
+      padding: 28px 18px 16px 18px;
+      max-width: 750px;
+      text-align: left;
+    }
+    h1 {
+      text-align: center;
+      color: #c0392b;
+      margin-bottom: 16px;
+    }
+    h2 {
+      color: #2980b9;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+    .tipo-desastre {
+      border: 1px solid #e1e1e1;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      padding: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 16px;
+      background: #f7f9fc;
+    }
+    .tipo-img {
+      flex: 0 0 110px;
+      width: 110px;
+      height: 90px;
+      border-radius: 7px;
+      object-fit: cover;
+      background: #eee;
+    }
+    .tipo-desc {
+      flex: 1 1 240px;
+    }
+    ul, ol {
+      margin: 10px 0 8px 20px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .subtitulo {
+      color: #e67e22;
+      margin: 14px 0 0 0;
+      font-weight: bold;
+    }
+    .consejos {
+      background: #eafbea;
+      border-left: 4px solid #27ae60;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin: 10px 0 14px 0;
+      color: #186a3b;
+      font-size: 1em;
+    }
+    .infografia {
+      display: flex;
+      flex-direction: row;
+      gap: 13px;
+      margin-top: 11px;
+      align-items: center;
+    }
+    .infografia img {
+      height: 60px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #kit {
+      background: #fff6e3;
+      border-left: 4px solid #f4d03f;
+      padding: 10px 14px;
+      border-radius: 6px;
+      color: #7f6000;
+      margin: 15px 0 12px 0;
+    }
+    #emergencia {
+      background: #ffebee;
+      border-left: 4px solid #d32f2f;
+      padding: 10px 14px;
+      border-radius: 6px;
+      color: #8c3333;
+      margin: 16px 0 16px 0;
+      font-weight: bold;
+    }
+    #ruletaBtn {
+      display: block;
+      margin: 34px auto 0 auto;
+      padding: 12px 36px;
+      background: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.08em;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #ccc;
+      transition: background 0.3s;
+    }
+    #ruletaBtn:hover {
+      background: #1c6286;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Desastres Naturales: Tipos, Causas y Prevención</h1>
+
+    <p>
+      Los <strong>desastres naturales</strong> son eventos extremos causados por fenómenos de la naturaleza que pueden producir graves daños a la vida humana, las propiedades y el medio ambiente. 
+      A continuación, puedes conocer los principales tipos de desastres, sus causas, consecuencias y formas recomendadas para prevenirlos o actuar ante ellos.
+    </p>
+    
+    <h2>Tipos de Desastres Naturales</h2>-
+
+
+    <div  class="tipo-desastre">
+      <img class="tipo-img"  src="https://www.ifrc.org/sites/default/files/styles/article_press_release_featured_image/public/2021-08/p-NPL0451_JPG%201280x853.jpg?itok=U9u6tMLK" alt="Terremoto1">
+      <P>
+        <p>
+      <img class="tipo-img" src="https://ca-times.brightspotcdn.com/dims4/default/21f650e/2147483647/strip/true/crop/5000x3333+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ffb%2F8c%2Fb6e8796e450885f50ea8bc22dbec%2Fap23037523545482.jpg" alt="Terremoto2">
+     
+      <div class="tipo-desc">
+        <b>Terremotos</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Movimientos bruscos de las placas tectónicas bajo la superficie.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Colapso de edificios, muertes, lesiones, daños masivos, desplazamientos, pérdidas económicas.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> Identifica zonas seguras y prepara un plan familiar.<br>
+          <b>Durante:</b> Colócate bajo una mesa resistente, alejado de ventanas.<br>
+          <b>Después:</b> Revisa daños, evita usar ascensores y ayuda a quienes lo necesiten.
+        </div>
+      </div>
+    </div>
+
+    <div class="tipo-desastre">
+      <img class="tipo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mayon_Volcano_eruption_as_of_Jan_23%2C_2018.jpg/320px-Mayon_Volcano_eruption_as_of_Jan_23%2C_2018.jpg" alt="Erupción volcánica">
+      <div class="tipo-desc">
+        <b>Erupciones volcánicas</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Acumulación de presión y gases en el interior de la Tierra.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Flujo de lava, explosiones, ceniza, destrucción de viviendas, contaminación del aire.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> Infórmate sobre los planes de evacuación locales.<br>
+          <b>Durante:</b> Usa mascarilla, cubre nariz y boca, evacúa si es necesario.<br>
+          <b>Después:</b> Evita ríos de lodo y zonas cubiertas de ceniza. 
+        </div>
+      </div>
+    </div>
+
+    <div class="tipo-desastre">
+      <img class="tipo-img" src="https://cdn.pixabay.com/photo/2018/08/01/07/51/hurricane-3579600_1280.jpg" alt="Huracán">
+      <div class="tipo-desc">
+        <b>Huracanes y Tormentas</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Acumulación de calor y humedad en zonas tropicales.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Vientos destructivos, inundaciones, apagones, daños masivos y evacuaciones.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> Refuerza puertas y ventanas, almacena agua y alimentos.<br>
+          <b>Durante:</b> Permanece en un lugar seguro, lejos de ventanas.<br>
+          <b>Después:</b> Atiende comunicados oficiales, evita zonas inundadas.
+        </div>
+      </div>
+    </div>
+    
+    <div class="tipo-desastre">
+      <img class="tipo-img" src="https://cdn.pixabay.com/photo/2012/05/29/00/43/tsunami-49210_960_720.jpg" alt="Tsunami">
+      <div class="tipo-desc">
+        <b>Tsunamis</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Terremotos submarinos, erupciones volcánicas o deslizamientos bajo el mar.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Olas gigantes, destrucción de comunidades costeras, grandes pérdidas humanas y materiales.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> Infórmate sobre alertas y rutas de evacuación.<br>
+          <b>Durante:</b> Dirígete a zonas elevadas de inmediato.<br>
+          <b>Después:</b> Mantente alejado de la costa hasta recibir señal de seguridad.
+        </div>
+      </div>
+    </div>
+
+    <div class="tipo-desastre">
+      <img class="tipo-img" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/flood-1991160_1280.jpg" alt="Inundación">
+      <div class="tipo-desc">
+        <b>Inundaciones</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Lluvias intensas, desbordamiento de ríos, falla de represas.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Pérdidas materiales, enfermedades, contaminación del agua, evacuaciones.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> Eleva objetos de valor, conoce rutas de evacuación.<br>
+          <b>Durante:</b> Aléjate de corrientes de agua, evita tocar cables eléctricos.<br>
+          <b>Después:</b> Desinfecta alimentos y agua, no regreses hasta que sea seguro.
+        </div>
+      </div>
+    </div>
+
+    <div class="tipo-desastre">
+      <img class="tipo-img" src="https://cdn.pixabay.com/photo/2015/09/18/11/08/cow-942522_1280.jpg" alt="Sequía">
+      <div class="tipo-desc">
+        <b>Sequías</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Falta prolongada de lluvias, cambio climático.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Pérdida de cultivos, escasez de agua y alimentos, migraciones.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> Almacena agua, practica el uso racional.<br>
+          <b>Durante:</b> Prioriza el consumo humano y animal.<br>
+          <b>Después:</b> Apoya campañas de reforestación y uso sustentable.
+        </div>
+      </div>
+    </div>
+
+    <div class="tipo-desastre">
+      <img class="tipo-img" src="https://cdn.pixabay.com/photo/2016/11/29/09/31/landslide-1866667_1280.jpg" alt="Deslizamiento de tierra">
+      <div class="tipo-desc">
+        <b>Deslizamientos de tierra</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Desprendimiento de suelos por lluvias fuertes, terremotos o deforestación.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Destrucción de viviendas, caminos bloqueados, lesiones y muertes.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> Evita construir en laderas inestables.<br>
+          <b>Durante:</b> Aléjate de la zona y notifica a las autoridades.<br>
+          <b>Después:</b> No regreses hasta que los expertos lo indiquen.
+        </div>
+      </div>
+    </div>
+    
+    <div class="tipo-desastre">
+      <img class="tipo-img" src="https://cdn.pixabay.com/photo/2016/08/13/22/16/forest-fire-1598883_1280.jpg" alt="Incendio forestal">
+      <div class="tipo-desc">
+        <b>Incendios forestales</b>
+        <div class="subtitulo">Causas:</div>
+        <ul>
+          <li>Altas temperaturas, sequía, rayos o acción humana involuntaria.</li>
+        </ul>
+        <div class="subtitulo">Efectos:</div>
+        <ul>
+          <li>Pérdida de flora y fauna, contaminación del aire y peligro para poblaciones cercanas.</li>
+        </ul>
+        <div class="subtitulo">Cómo actuar:</div>
+        <div class="consejos">
+          <b>Antes:</b> No hagas fogatas en zonas secas.<br>
+          <b>Durante:</b> Evacúa si se acerca el fuego.<br>
+          <b>Después:</b> No regreses hasta recibir autorización.
+        </div>
+      </div>
+    </div>
+    
+    <h2>🧠 Causas y efectos generales</h2>
+    <ul>
+      <li><strong>Causas:</strong> Fenómenos naturales (movimientos de placas, clima extremo), actividades humanas (deforestación, contaminación).</li>
+      <li><strong>Efectos:</strong> Pérdidas de vidas, daños económicos y ecológicos, migraciones, cambios en el clima regional o global, impacto en la salud.</li>
+    </ul>
+
+    <h2>🏠 Cómo prevenir y actuar ante desastres</h2>
+
+    <div class="consejos">
+      <b>Antes:</b> 
+      <ul>
+        <li>Infórmate sobre los riesgos de tu zona.</li>
+        <li>Prepara un plan familiar de emergencia.</li>
+        <li>Ten listo un kit básico de supervivencia.</li>
+        <li>Conoce rutas de evacuación y puntos de encuentro.</li>
+      </ul>
+      <b>Durante:</b> 
+      <ul>
+        <li>Mantén la calma y sigue recomendaciones oficiales.</li>
+        <li>Busca refugio seguro según el tipo de desastre.</li>
+        <li>Usa medios de comunicación para pedir ayuda si es necesario.</li>
+      </ul>
+      <b>Después:</b>
+      <ul>
+        <li>Revisa si hay heridos y brinda primeros auxilios.</li>
+        <li>No regreses a zonas de riesgo hasta que sea seguro.</li>
+        <li>Reporta daños a las autoridades.</li>
+      </ul>
+    </div>
+
+    <div class="infografia">
+      <img src="https://www.gob.mx/cms/uploads/article/main_image/100611/kit_de_emergencia.jpg" alt="Kit de emergencia">
+      <div id="kit">
+        <b>Kit de emergencia:</b>
+        <ul>
+          <li>Agua potable, alimentos no perecederos, radio, linterna, baterías, botiquín, mascarillas, documentos importantes, ropa de abrigo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="emergencia">
+      Números de emergencia: <br>
+      911 (Atención general) <br>
+      Protección Civil local <br>
+      Cruz Roja: 065
+    </div>
+
+    <button id="ruletaBtn" onclick="window.location.href='proyecto.html'">
+      Ir a la Ruleta Interactiva
+    </button>
+  </div>
+</body>
+</html>
